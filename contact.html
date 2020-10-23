@@ -1,0 +1,91 @@
+<html>
+    <head>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Rashad Amin</title>
+	<script>
+	    function responsiveNav() {
+  		var x = document.getElementById("navbar");
+  		if (x.className === "navbar") {
+    		    x.className += " responsive";
+  		} else {
+    		    x.className = "navbar";
+  		}
+	    }
+		
+	
+		function validateForm() {
+		  var x = document.forms["myForm"]["name"].value;
+		  if (x == "") {
+			alert("Name must be filled out");
+			return false;
+		  }
+		}
+	
+	</script>
+	
+		
+    </head>
+
+
+    <body>
+        <div class="navbar" id="navbar">
+			<a href="index.html">Home</a>
+			<a href="portfolio.html">Portfolio</a>
+			<a href="resume.html">Resume</a>
+			<a class="active" href="contact.html">Contact</a>
+            <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
+    		<i class="fa fa-bars"></i></a>
+		</div>
+
+
+
+
+
+		<img src="img/banner.jpg" alt="Information Management: Our Shared Responsibility" style="width:100%">
+		
+		
+		<div class="mainContainer">
+			
+			
+			<form name="myForm">
+			  
+			  
+			  <div class="rowContact">
+				<div class="labelCol">
+				  <label for="name">First Name:</label>
+				</div>
+				<div class="formCol">
+				  <input type="text" id="name" name="name" placeholder="Write your name here ">
+				</div>
+			  </div>
+			  <div class="rowContact">
+				<div class="labelCol">
+				  <label for="email">Email:</label>
+				</div>
+				<div class="formCol">
+				  <input type="text" id="email" name="email" placeholder="Write your email address here">
+				</div>
+			  </div>
+			  
+			  <div class="rowContact">
+				<div class="labelCol">
+				  <label for="message">Message:</label>
+				</div>
+				<div class="formCol">
+				  <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+				</div>
+			  </div>
+			  <div class="rowContact">
+				<div class="formCol" style="float: right;">
+				<input type="submit" value="Submit" onclick="validateForm()">
+				</div>
+			  </div>
+			</form>
+		  </div>
+		
+		        <div class="mainContainer" style="background-color: #7c0f73; color: white;"><p>Copyright 2020</p></div>
+
+</body>
+</html>

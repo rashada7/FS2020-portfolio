@@ -10,7 +10,17 @@
 
 }
 
+.mainContainer{
+  /*border-radius: 5px;*/
+  padding: 20px;
+}
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 
 
 /*Navbar Styles*/
@@ -34,10 +44,16 @@
 
 .navbar a:hover {
     background-color: #0b6132;
+     border-bottom-style:solid; 
+    border-bottom-width: thick;
+    border-bottom-color: #7c0f73; 
 }
 
 .navbar a.active {
     background-color: #0b6132;
+    border-bottom-style:solid; 
+    border-bottom-width: thick;
+    border-bottom-color: #7c0f73; 
 }
 
 .navbar .icon{
@@ -132,11 +148,11 @@ box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
   display: inline-block;
   padding: 8px;
   color: white;
-  background-color: #0F7C41;
+  background-color: #7c0f73;
   text-align: center;
   cursor: pointer;
   width: 100%;
-border-radius: 10px;
+  border-radius: 10px;
 }
 
 .cardImg{
@@ -147,7 +163,89 @@ border-radius: 10px;
 }
 
 .button:hover {
-  background-color: #0b6132;
+  background-color: #570b50;
+}
+
+/*Contact Form*/
+
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], textarea {
+  width: 100%;
+  padding: 12px;
+  resize: vertical;
+  border: none;
+  border-bottom-style:solid; 
+    border-bottom-width: thick;
+    border-bottom-color: #7c0f73; 
+}                
+
+label {
+  padding: 12px;
+  display: inline-block;
+}
+
+input[type=submit] {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px;
+  color: white;
+  background-color: #7c0f73;
+  text-align: center;
+  width: 100%;
+border-radius: 10px;
+}
+
+input[type=submit]:hover {
+  background-color: #570b50;
 }
 
 
+
+.labelCol {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.formCol {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.rowContact:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+@media screen and (max-width: 900px) {
+  .formCol, .labelCol, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+/*Resume Menu*/
+.resumeMenu {
+  width: 200px;
+  
+ 
+}
+
+.resumeMenu a {
+  background-color: #0F7C41;
+  color: white; 
+  display: block; 
+  padding: 12px; 
+  text-decoration: none; 
+}
+
+.resumeMenu a:hover {
+  background-color: #0b6132;
+}
