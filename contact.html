@@ -14,13 +14,25 @@
   		}
 	    }
 		
-	
+		//Script for validating contact form
 		function validateForm() {
-		  var x = document.forms["myForm"]["name"].value;
-		  if (x == "") {
-			alert("Name must be filled out");
-			return false;
-		  }
+			//Takes value from first name box, set it to the variable x	
+			var x = document.forms["myForm"]["name"].value;
+			
+			
+			//if x is empty
+			if (x == "") {
+				
+				//call this alert to be displayer
+				alert("Name must be filled out");
+				return false;
+			}
+			
+			//else, return true and display success alert
+			else{
+				alert("Thank you for your interest! We will get back to you as soon as possible!");
+				return true;
+			}
 		}
 	
 	</script>
@@ -30,6 +42,8 @@
 
 
     <body>
+		
+		<!--navbar-->
         <div class="navbar" id="navbar">
 			<a href="index.html">Home</a>
 			<a href="portfolio.html">Portfolio</a>
@@ -42,50 +56,61 @@
 
 
 
-
-		<img src="img/banner.jpg" alt="Information Management: Our Shared Responsibility" style="width:100%">
+		<!--Banner-->
+		<div class="banner">
+			<div class="banner-text">
+				<h1 style="font-size:50px"><br><br>Contact</h1>
+			</div>
+		</div>
 		
 		
 		<div class="mainContainer">
 			
-			
+			<!--Contact form (Doesn't submit anything, just validates)-->
 			<form name="myForm">
 			  
 			  
-			  <div class="rowContact">
-				<div class="labelCol">
-				  <label for="name">First Name:</label>
+				<div class="rowContact">
+					<div class="labelCol">
+						<label for="name">First Name:</label>
+					</div>
+					<div class="formCol">
+						<input type="text" id="name" name="name" placeholder="Write your name here ">
+					</div>
 				</div>
-				<div class="formCol">
-				  <input type="text" id="name" name="name" placeholder="Write your name here ">
-				</div>
-			  </div>
-			  <div class="rowContact">
-				<div class="labelCol">
-				  <label for="email">Email:</label>
-				</div>
-				<div class="formCol">
-				  <input type="text" id="email" name="email" placeholder="Write your email address here">
-				</div>
-			  </div>
 			  
-			  <div class="rowContact">
-				<div class="labelCol">
-				  <label for="message">Message:</label>
+			  
+				<div class="rowContact">
+					<div class="labelCol">
+						<label for="email">Email:</label>
+					</div>
+					<div class="formCol">
+						<input type="text" id="email" name="email" placeholder="Write your email address here">
+					</div>
 				</div>
-				<div class="formCol">
-				  <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+			  
+				<div class="rowContact">
+					<div class="labelCol">
+						<label for="message">Message:</label>
+					</div>
+					<div class="formCol">
+						<textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+					</div>
 				</div>
-			  </div>
-			  <div class="rowContact">
-				<div class="formCol" style="float: right;">
-				<input type="submit" value="Submit" onclick="validateForm()">
+				
+				
+				<div class="rowContact">
+					<div class="formCol" style="float: right;">
+						<input type="submit" value="Submit" onclick="validateForm()">
+					</div>
 				</div>
-			  </div>
 			</form>
-		  </div>
+			
+			
+		</div> <!--End tag for mainContainer-->
 		
-		        <div class="mainContainer" style="background-color: #7c0f73; color: white;"><p>Copyright 2020</p></div>
+		<!--Footer-->
+		<div class="mainContainer" style="background-color: #7c0f73; color: white;"><p>Copyright 2020</p></div>
 
-</body>
+	</body>
 </html>

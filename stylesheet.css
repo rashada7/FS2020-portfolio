@@ -1,26 +1,47 @@
-  body{
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
+body{
+  margin: 0;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 }
 
-.headers{
+
+/*Banner style with text*/
+.banner {
+  background-image: url("img/banner.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.banner-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+/*.headers{
     padding: 8px;
     text-align: center;
 
-}
+}*/
 
 .mainContainer{
   /*border-radius: 5px;*/
   padding: 20px;
 }
 
-.center {
+/*.center {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-}
+}*/
 
 
 /*Navbar Styles*/
@@ -60,6 +81,8 @@
     display: none;
 }
 
+
+/*The following is for setting the "breaking point" of when the navbar shifts to the mobile version*/
 @media screen and (max-width: 600px) {
   .navbar a:not(:first-child) {display: none;}
   .navbar a.icon {
@@ -84,22 +107,6 @@
 
 
 
-
-
-/*Banner image styles*/
-
-
-.hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("img/bannersmall.jpg");
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-
-
 /*Card style*/
 
 *, *:before, *:after {
@@ -113,6 +120,7 @@
   padding: 0 8px 8px 8px;
 }
 
+/*Decides when to make rows into just one column*/
 @media screen and (max-width: 900px) {
   .column {
     width: 100%;
@@ -231,21 +239,4 @@ input[type=submit]:hover {
   }
 }
 
-/*Resume Menu*/
-.resumeMenu {
-  width: 200px;
-  
- 
-}
 
-.resumeMenu a {
-  background-color: #0F7C41;
-  color: white; 
-  display: block; 
-  padding: 12px; 
-  text-decoration: none; 
-}
-
-.resumeMenu a:hover {
-  background-color: #0b6132;
-}

@@ -2,22 +2,30 @@
     <head>
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--The stylesheet below allows for a hamburger menu to appear in place of the nav when the screen is small-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Rashad Amin</title>
 	<script>
+		
+		
+		//This function is for making the top navigation bar responsive
 	    function responsiveNav() {
-  		var x = document.getElementById("navbar");
-  		if (x.className === "navbar") {
-    		    x.className += " responsive";
-  		} else {
-    		    x.className = "navbar";
-  		}
+			var x = document.getElementById("navbar");
+			if (x.className === "navbar") {
+					x.className += " responsive";
+			} else {
+					x.className = "navbar";
+			}
 	    }
+		
+		
 	</script>
     </head>
 
 
     <body>
+		
+		<!--This is the html for the navbar-->
         <div class="navbar" id="navbar">
 			<a class="active" href="index.html">Home</a>
 			<a href="portfolio.html">Portfolio</a>
@@ -26,61 +34,83 @@
             <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
     		<i class="fa fa-bars"></i></a>
 		</div>
-        
-        <img src="img/banner.jpg" style="width:100%">
 		
-		 <div class="mainContainer" style="background-color: #0F7C41;">
 		
-		<h1 style="text-align: center;">Quick Links</h1>
-		
-		<div class="row">
-		<div class="column" style="width:33%; text-align: center;">
-		  <div class="card" style="background-color: white;">
-			<div class="container" style="padding:15px;">
-			  <h2>Resume</h2>
+        <!--This the the header/banner, it has text overlaid-->
+        <div class="banner">
+			<div class="banner-text">
+				<h1 style="font-size:50px"><br><br>Rashad Amin</h1>
 			</div>
-		  </div>
 		</div>
 		
 		
+		<!--Quick Links container div. I have reused this div throughout the project while simply changing the colour for each div through internal style tags-->
+		<div class="mainContainer" style="background-color: #0F7C41;">
 		
-  
-		
-			<div class="column" style="width:33%; text-align: center;">
-			  <div class="card" style="background-color: #7c0f73;">
-				<div class="container" style="padding:15px;">
-				  <h2 style="color:white;">Portfolio</h2>
+			<h1 style="text-align: center;">Quick Links</h1>
+			
+			<!--Row of Quick links-->
+			<div class="row">
+				
+				<!--Each Column has a quick link. Width is set at 33% since there are 3 options-->
+				<div class="column" style="width:33%; text-align: center;">
+					<div class="card" style="background-color: white;">
+						<a href="resume.html">
+						<div class="container" style="padding:15px;">
+							<h2>Resume</h2>
+						</div>
+						</a>
+					</div>
 				</div>
-			</div>
-			</div>
+			
+			
+			
+	  
+			
+				<div class="column" style="width:33%; text-align: center;">
+					<div class="card" style="background-color: #7c0f73;">
+						<a href="portfolio.html">
+						<div class="container" style="padding:15px;">
+							<h2 style="color:white;">Portfolio</h2>
+						</div>
+						</a>
+					</div>
+				</div>
+			
+				
+				
+				
+	
+			
+				<div class="column" style="width:33%; text-align: center;">
+					<div class="card" style="background-color: white;">
+						<a href="contact.html">
+						<div class="container" style="padding:15px;">
+							<h2>Contact</h2>
+						</div>
+						</a>
+					</div>
+				</div>
+				
+				
+			</div> <!--End tag for row-->
 		
-			
-			
-			
-
-		
-		  <div class="column" style="width:33%; text-align: center;">
-			<div class="card" style="background-color: white;">
-			  <div class="container" style="padding:15px;">
-				<h2>Contact</h2>
-			  </div>
-			</div>
-		  </div>
-		  </div>
+		</div> <!--End tag for mainContainer-->
+		 
+		 
+		 
+		 <!--About Section-->
+		 
+		 <div class="mainContainer" style="background-color: white;">
+		 
+			<h2>About</h2>
+			<p>I a graduate York University's Information Technology program.
+			I currently work for the Government of Canada's Public Service and Procurement Branch. I am an aspiring full stack developer and this site is a showcase
+			of my work and abilities</p>
 		
 		 </div>
 		 
-		 
-		 
-		 
-		 <div class="mainContainer" style="background-color: #7c0f73; color: white;">
-		 
-		<h2>About</h2>
-		<p>I a graduate York University's Information Technology program.
-		I currently work for the Government of Canada's Public Service and Procurement Branch. I am an aspiring full stack developer and this site is a showcase
-		of my work and abilities</p>
-		
-		 </div>
+		 <!--Footer-->
 		 
 		 <div class="mainContainer" style="background-color: #7c0f73; color: white;"><p>Copyright 2020</p></div>
 		 
