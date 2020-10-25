@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>If else</title>
+        
+        <script>
+             
+             function identifyUser() {
+                var x = document.forms["myForm"]["usr"].value;
+                var y = document.forms["myForm"]["pwd"].value;
+                if (x == "admin" && y=="TheMaster") {
+                    alert("Welcome");
+                }
+                if (x==null) {
+                   alert("Canceled");
+                }
+                
+                else{
+                    alert("I don't know you");
+                }
+             }
+             
+             
+             function puppyCalc() {
+                var x = document.forms["puppyCalculator"]["age"].value;
+                var puppyAge = x*7;
+                alert("Your puppy is " + puppyAge + " years old in dog years!");
+                
+             }
+                
+            
+         </script>
+    </head>
+    <body>
+        <form name="myForm" onsubmit="return identifyUser()">
+            Username: <input type="text" name="usr"><br>
+            Password: <input type="password" name="pwd"><br>
+            <input type="submit" value="Submit">
+        </form>
+        <hr>
+        <form name="puppyCalculator" onsubmit="return puppyCalc()">
+            Enter your dog's age: <input type="text" name="age"><br>
+             <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
